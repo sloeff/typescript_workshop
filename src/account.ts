@@ -19,6 +19,7 @@ export class Account {
     if (amount <= 0) {
       throw new Error("Please supply a positive, non-zero amount");
     }
+
     if (this._type == "Savings" && amount > this._balance) {
       throw new Error("Cannot go into negative on a savings account");
     }
