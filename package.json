@@ -1,0 +1,15 @@
+{
+  "name": "typescript_workshop",
+  "version": "1.0.0",
+  "description": "workshop",
+  "license": "ISC",
+  "author": "Sander Loeff",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest"
+  },
+  "dependencies": {
+    "tsx": "^4.19.4"
+  }
+}
