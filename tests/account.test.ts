@@ -30,4 +30,9 @@ describe("Error producing tests", () => {
     let checkingAccount = new Account("checking");
     expect(() => checkingAccount.deposit(-1)).toThrowError("Please supply a positive, non-zero amount");
   });
+
+  test("Deposit zero is not allowed", () => {
+    let checkingAccount = new Account("checking");
+    expect(() => checkingAccount.deposit(0)).toThrowError("Wrong message");
+  });
 });
