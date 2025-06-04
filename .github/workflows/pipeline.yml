@@ -1,0 +1,20 @@
+name: Build pipeline and execute tests
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  test:
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    permissions:
+      checks: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+        name: Get test project from version control
+      - name: Install dependencies
+        run: npm ci
+      - name: Run the tests
+        run: npx vitest
